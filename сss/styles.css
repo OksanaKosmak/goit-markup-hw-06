@@ -43,6 +43,7 @@
     --color-footer-email-text:  rgba(255, 255, 255, 0.6);
     --color-border-modal-input: #2196F3;
     --color-modal-icon: #212121;
+    --color-modal-icon-X: #2196F3;
     --color-modal-icon-focus: #2196F3;
     --color-footer-form-icon: #FFFFFF;
     --color-background-modal-icon-checkbox: #2196F3;
@@ -1137,7 +1138,7 @@ footer {
     height: 581px;
     background-color: var(--color-background-modal);
     border-radius: 4px;
-    padding: 8px;
+    padding: 40px;
     
 }
 
@@ -1170,9 +1171,14 @@ footer {
     width: 18px;
     height: 18px;
     fill: black;
-    
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.button-close-modal:hover {
+    fill: var(--color-modal-icon-X);
+    
+}
 .link-nav {
     position: relative;
 }
@@ -1217,7 +1223,7 @@ footer {
 .form-field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    
     padding: 0;
     position: relative;
 
@@ -1225,6 +1231,12 @@ footer {
    
 }
 
+.form-field + .form-field {
+    
+    margin-top: 10px;
+    
+   
+}
 
 /*.form-field input {
     margin: 0;
@@ -1324,7 +1336,6 @@ textarea {
     line-height: 1.15;
     text-align: center;
     margin-bottom: 10px;
-    margin-top: 40px;
     letter-spacing: 0.03em;
 }
 
@@ -1439,6 +1450,7 @@ textarea {
     height: 24px;
 
     margin-bottom: 30px;
+    margin-top: 10px;
     padding: 0;
     
     position: relative;
